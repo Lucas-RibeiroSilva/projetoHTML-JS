@@ -1,0 +1,71 @@
+body {
+    margin: 0;
+    background: linear-gradient(304deg, #cccbcb, #c0bebe);
+    font-family: "Oswald", sans-serif;
+}
+
+header {
+    background-image: url(/imagens/fundo-header.jpg);
+    background-size: cover;
+    background-position: center;
+    padding: 10px;
+    border-bottom: 1px solid #000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header a {
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 20px;
+    text-decoration: none;
+    color: black;
+}
+
+.index, .alunos-index {
+    width: 50px;
+    height: 50px;
+}
+
+.titulo {
+    font-size: 30px;
+    text-align: center;
+}
+
+.principal {
+    text-align: center;
+}
+
+.card {
+    margin: auto;
+    margin-top: 20px;
+    background-image: url(/imagens/fundo-header.jpg);
+    border: 2px solid #000;
+    border-radius: 12px;
+    padding: 20px;
+    max-width: 800px;
+}
+
+.card p {
+    margin: 10px 0;
+    font-weight: bold;
+}
+
+.principal button {
+    background-color: #da3636;
+    color: #fff;
+    border: 2px solid #000000;
+    padding: 10px 20px;
+    font-size: 1rem;
+    margin: 10px;
+    transition: 0.3s;
+}
+
+.principal button:hover {
+    background-color: #881414;
+    border-color: #000000;
+    border-radius: 8px;
+}
