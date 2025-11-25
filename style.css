@@ -1,0 +1,98 @@
+/* ====== GLOBAL ====== */
+body {
+    margin: 0;
+    background: linear-gradient(304deg, #cccbcb, #c0bebe);
+    font-family: "Oswald", sans-serif;
+}
+
+header {
+    background-image: url(imagens/fundo-header.jpg);
+    background-size: cover;
+    background-position: center;
+    padding: 10px;
+    border-bottom: 1px solid #000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header a {
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 20px;
+    text-decoration: none;
+    color: black;
+}
+
+.index, .alunos-index {
+    width: 50px;
+    height: 50px;
+}
+
+.titulo {
+    font-size: 30px;
+    text-align: center;
+}
+
+.principal {
+    text-align: center;
+}
+
+.card {
+    margin: auto;
+    margin-top: 20px;
+    background-image: url(imagens/fundo-header.jpg);
+    border: 2px solid #000;
+    border-radius: 12px;
+    padding: 20px;
+    max-width: 800px;
+}
+
+.card p {
+    margin: 10px 0;
+    font-weight: bold;
+}
+
+.notas-1, .notas-2, .notas-3 {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 10px 0;
+}
+
+input {
+    padding: 10px;
+    border: 1px solid #000;
+    border-radius: 8px;
+}
+
+.principal button {
+    background-color: #d3d0d0;
+    border: 2px solid #a0a0a0;
+    padding: 10px 20px;
+    font-size: 1rem;
+    margin: 10px;
+    transition: 0.3s;
+}
+
+.principal button:hover {
+    background-color: #aaa9a9;
+    border-color: #8a8989;
+    border-radius: 8px;
+}
+
+.nota-final {
+    margin-top: 20px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.nota-final .mensagem{
+    font-size: 2rem;
+}
+
+.nota-final .media{
+    font-size: 1rem;
+}

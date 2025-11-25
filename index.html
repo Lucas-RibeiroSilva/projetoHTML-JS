@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Avaliador</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="imagens/logo-site.png">
+</head>
+<body>
+
+    <header>
+            <a href="./index.html"><img class="index" src="imagens/logo-header.png" alt="ir para a pagina de avaliar">Avaliar</a>
+            <div class="titulo"><b>Avaliador automático</b></div>
+            <a href="/html-auxiliar/alunos.html">Alunos<img class="alunos-index" src="imagens/aluna.png" alt="ir para a pagina alunos"></a>
+    </header>
+
+    <div class="principal">
+        <h1>Digite as suas notas abaixo:</h1>
+        
+        <div class="card">
+
+            <p>Escreva o nome do aluno:</p>
+            <input type="text" id="nome-aluno" placeholder="Digite o nome">
+
+            <div class="notas-1">
+                <p>Matemática:</p>
+                <input type="text" id="nota-matematica" placeholder="Digite a nota">
+                <p>Português:</p>
+                <input type="text" id="nota-portugues" placeholder="Digite a nota">
+            </div>
+
+            <div class="notas-2">
+                <p>História:</p>
+                <input type="text" id="nota-historia" placeholder="Digite a nota">
+                <p>Geografia:</p>
+                <input type="text" id="nota-geografia" placeholder="Digite a nota">
+            </div>
+
+            <div class="notas-3">
+                <p>Ciências:</p>
+                <input type="text" id="nota-ciencias" placeholder="Digite a nota">
+            </div>
+        </div>
+
+        <div class="botoes-final">
+            <button onclick="verificarNota()"><b>Avaliar média</b></button>
+            <button onclick="listarAluno()"><b>Listar aluno</b></button>
+        </div>
+    </div>
+
+    <div class="nota-final">
+        <p class="mensagem" id="mensagem"></p>
+        <p class="media" id="media"></p>
+    </div>
+
+    <script>
+        function verificarNota(){
+            const aluno = document.getElementById("nome-aluno").value;
+            const matematica = Number(document.getElementById("nota-matematica").value);
+            const portugues = Number(document.getElementById("nota-portugues").value);
+            const historia = Number(document.getElementById("nota-historia").value);
+            const geografia = Number(document.getElementById("nota-geografia").value);
+            const ciencias = Number(document.getElementById("nota-ciencias").value);
+
+            const soma = matematica + portugues + historia + geografia + ciencias;
+            const media = Math.floor(soma / 5);
+
+            if(media >= 65){
+                document.getElementById("mensagem").innerText = aluno + " está aprovado(a)";
+            } else if (media >= 55){
+                document.getElementById("mensagem").innerText = aluno + " está de recuperação";
+            }else{
+                document.getElementById("mensagem").innerText = aluno + " está reprovado(a)";
+            }
+
+            document.getElementById("media").innerText = "Nota média: " + media;
+        }
+
+    </script>
+    
+</body>
+</html>
